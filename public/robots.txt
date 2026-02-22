@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Sitemap: https://savsata.com.tr/site_map.xml

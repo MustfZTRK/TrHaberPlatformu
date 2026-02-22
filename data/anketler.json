@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "haber_id": 1,
+    "soru": "Yapay zekanın yükselişi sizi korkutuyor mu?",
+    "secenekler": [
+      {
+        "id": 1,
+        "metin": "Evet, endişeliyim",
+        "oy_sayisi": 12
+      },
+      {
+        "id": 2,
+        "metin": "Hayır, heyecanlıyım",
+        "oy_sayisi": 45
+      },
+      {
+        "id": 3,
+        "metin": "Kararsızım",
+        "oy_sayisi": 9
+      }
+    ],
+    "oy_kullananlar": [
+      "mustafa"
+    ]
+  }
+]

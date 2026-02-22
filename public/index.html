@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savsata - Sosyal Haber</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-area">
+                <i class="logo-position"><img id="site-logo" src="dark-logo.png" border="0" width="60" height="30" alt="Logo" /></i>
+                <div class="logo-main">
+                     
+                   <!--  <i class="fa-solid fa-newspaper"></i>-->
+                    <!--<span class="logo-text">Pano.tr</span>-->
+                </div>
+                <a href="#" class="profile-link-btn nav-item" title="Profil">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" title="Anasayfa">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-text">Anasayfa</span>
+                </a>
+                <a href="#" class="nav-item" title="Gündem">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="nav-text">Gündem</span>
+                </a>
+                <a href="#" class="nav-item" title="Spor">
+                    <i class="fa-solid fa-futbol"></i>
+                    <span class="nav-text">Spor</span>
+                </a>
+                <a href="#" class="nav-item" title="Ekonomi">
+                    <i class="fa-solid fa-coins"></i>
+                    <span class="nav-text">Ekonomi</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="toggle-sidebar" class="icon-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="main-content">
+            <header class="feed-header" id="global-header">
+                <div class="header-top">
+                    <div class="header-left">
+                        <h1>Son Dakika</h1>
+                        <div class="grid-toggle" id="grid-toggle">
+                            <button type="button" class="grid-btn active" data-cols="1">Tekli</button>
+                            <button type="button" class="grid-btn" data-cols="2">İkili</button>
+                            <button type="button" class="grid-btn" data-cols="3">Üçlü</button>
+                            <button type="button" class="grid-btn" data-cols="4">Dörtlü</button>
+                        </div>
+                    </div>
+                    <div class="header-right-container">
+                        <div class="header-actions">
+                            <div class="search-box">
+                                <input type="text" id="search-input" placeholder="Haber ara...">
+                                <i class="fa-solid fa-search"></i>
+                                <div class="search-toggle">
+                                    <button id="search-news-btn" class="active">Haber</button>
+                                    <button id="search-user-btn">Kullanıcı</button>
+                                </div>
+                            </div>
+                            <button id="theme-toggle" class="icon-btn" title="Tema Değiştir">
+                                <i class="fa-solid fa-moon"></i>
+                            </button>
+                            <div class="user-actions" id="user-actions">
+                                <button class="btn-login" id="open-login-btn">Giriş Yap</button>
+                            </div>
+                            <div class="user-profile-summary hidden" id="user-profile-summary">
+                                <img id="header-avatar" class="header-avatar" src="" alt="Avatar">
+                                <a href="#" id="share-news-btn" class="icon-btn share-news-btn" title="Haber Paylaş">
+                                    <i class="fa-solid fa-plus"></i> Paylaş
+                                </a>
+                                <button id="open-messages-btn" class="icon-btn" title="Mesajlar">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </button>
+                                <span id="user-greeting">Merhaba</span>
+                                <button id="logout-btn" class="icon-btn" title="Çıkış Yap"><i
+                                        class="fa-solid fa-right-from-bracket"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-tickers">
+                    <div class="marquee-wrapper">
+                        <div class="marquee-label">SON DAKİKA</div>
+                        <div class="marquee-outer">
+                            <div class="marquee-inner" id="news-marquee">
+                                <span>Haberler yükleniyor...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="marquee-wrapper finance-wrapper">
+                        <div class="marquee-label finance-label">PİYASALAR</div>
+                        <div class="marquee-outer">
+                            <div class="marquee-inner" id="finance-marquee">
+                                <span>Veriler yükleniyor...</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </header>
+
+            <div class="app-body">
+                <!-- News Feed -->
+                <div class="news-feed-container" id="news-feed-container">
+                    <div class="news-list" id="news-list">
+                        <!-- Haber kartları buraya JS ile eklenecek -->
+                    </div>
+                    <!-- Yükleniyor animasyonu bottom -->
+                    <div class="loading-spinner hidden" id="feed-loader">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Yükleniyor...
+                    </div>
+                </div>
+
+                <!-- Preview Frame (Initially Hidden) -->
+                <div class="preview-frame" id="preview-frame">
+                    <button class="close-frame-btn" id="close-frame-btn"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="frame-content" id="frame-content">
+                        <!-- Seçilen haber detayı buraya gelecek -->
+                        <div class="placeholder-content">
+                            <p>Haber detayını görüntülemek için bir habere tıklayın.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Messages Frame (Initially Hidden) -->
+                <div class="preview-frame" id="messages-frame" style="display:none;">
+                    <button class="close-frame-btn" id="close-messages-btn"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="frame-content" id="messages-content">
+                        <!-- Mesajlar paneli JS ile doldurulacak -->
+                        <div class="placeholder-content">
+                            <p>Mesajlarınızı görüntülemek için üstteki Mesajlar butonuna tıklayın.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Following Frame (Initially Hidden) -->
+                <div class="preview-frame" id="following-frame" style="display:none;">
+                    <button class="close-frame-btn" id="close-following-btn"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="frame-content" id="following-content">
+                        <div class="placeholder-content">
+                            <p>Takip ettiklerinizi görmek için Profilden açın.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Legal Frame (Initially Hidden) -->
+                <div class="preview-frame" id="legal-frame" style="display:none;">
+                    <button class="close-frame-btn" id="close-legal-frame-btn"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="frame-content" id="legal-frame-content">
+                        <div class="placeholder-content">
+                            <p>Gizlilik, Kullanım Şartları ve Çerez Politikasını buradan okuyabilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Login/Register Modal -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-container">
+            <button class="close-modal-btn" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Giriş Yap</button>
+                <button class="tab-btn" data-tab="register">Kayıt Ol</button>
+            </div>
+
+            <div class="tab-content active" id="login-tab">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <!-- Policy Checkbox -->
+                    <div class="policy-check">
+                        <input type="checkbox" id="login-policy" required>
+                        <label for="login-policy">
+                            <a href="#" onclick="openLegalModal('privacy')">Gizlilik</a> ve
+                            <a href="#" onclick="openLegalModal('terms')">Kullanım Şartlarını</a> okudum.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">Giriş Yap</button>
+                    <p class="error-msg" id="login-error"></p>
+                </form>
+            </div>
+
+            <div class="tab-content" id="register-tab">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label>Kullanıcı Adı</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Şifre</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-posta</label>
+                        <input type="email" id="register-email" placeholder="ornek@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Doğum Tarihi</label>
+                        <input type="date" id="register-birthdate" required>
+                        <small style="color:var(--text-secondary);">18 yaşından büyük olmanız gerekir.</small>
+                    </div>
+                    <!-- Policy Checkbox -->
+                    <div class="policy-check">
+                        <input type="checkbox" id="register-policy" required>
+                        <label for="register-policy">
+                            <a href="#" onclick="openLegalModal('privacy')">Gizlilik</a>,
+                            <a href="#" onclick="openLegalModal('terms')">Kullanım Şartları</a> ve
+                            <a href="#" onclick="openLegalModal('cookies')">Çerez Politikasını</a> okudum.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-submit">Bize Katıl</button>
+                    <p class="error-msg" id="register-error"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Legal Modals -->
+    <div class="modal-overlay" id="legal-modal">
+        <div class="modal-container">
+            <button class="close-modal-btn" onclick="closeLegalModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div id="legal-content" class="legal-text"></div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <p>Size daha iyi bir deneyim sunmak için çerezleri kullanıyoruz. Sitemizi kullanarak <a href="#"
+                    onclick="openLegalModal('cookies')" style="color:var(--accent-color);">Çerez Politikamızı</a> kabul
+                etmiş olursunuz.</p>
+        </div>
+        <button class="cookie-btn" onclick="acceptCookies()">Kabul Et</button>
+    </div>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

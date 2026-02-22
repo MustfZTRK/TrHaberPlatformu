@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrHaber - Admin Paneli</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .admin-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .admin-sidebar {
+            width: 250px;
+            background: #1a1a1a;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f0f2f5;
+        }
+
+        .admin-link {
+            display: block;
+            padding: 15px 20px;
+            color: #bbb;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+        }
+
+        .admin-link.active,
+        .admin-link:hover {
+            background: #333;
+            color: white;
+            border-left-color: #1877f2;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .data-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        .btn-edit {
+            background: #f39c12;
+        }
+
+        .btn-delete {
+            background: #e74c3c;
+        }
+
+        .btn-block {
+            background: #34495e;
+        }
+
+        .add-new-btn {
+            background: #1877f2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* Modal for Admin Forms */
+        .admin-form-group {
+            margin-bottom: 15px;
+        }
+
+        .admin-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .admin-form-group input,
+        .admin-form-group select,
+        .admin-form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div style="padding: 20px; font-size: 1.2rem; font-weight: bold;">Admin Paneli</div>
+            <nav>
+                <a href="#" class="admin-link active" data-target="users">Kullanıcılar</a>
+                <a href="#" class="admin-link" data-target="haberler">Haberler</a>
+                <a href="#" class="admin-link" data-target="sources">Kaynaklar</a>
+                <a href="#" class="admin-link" data-target="categories">Kategoriler</a>
+                <a href="#" class="admin-link" data-target="ziyaretciler">Ziyaretçiler</a>
+                <a href="/" class="admin-link" style="margin-top: auto; border-top: 1px solid #333;">Siteye Dön</a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <div id="content-area">
+                <!-- Dynamic Content Here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Universal Edit/Add Modal -->
+    <div class="modal-overlay" id="admin-modal">
+        <div class="modal-container">
+            <button class="close-modal-btn" id="close-admin-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2 id="modal-title" style="margin-bottom: 20px;">Düzenle</h2>
+            <form id="admin-form">
+                <div id="form-fields"></div>
+                <button type="submit" class="btn-submit">Kaydet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

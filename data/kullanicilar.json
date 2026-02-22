@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "kullanici_adi": "admin",
+    "sifre": "1770141201928",
+    "role": "admin",
+    "profil_resmi": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "bio": "Site yöneticisi",
+    "begendigi_haberler": [],
+    "bildirimler": [],
+    "is_blocked": false,
+    "following": [],
+    "followers": [],
+    "saved_articles": []
+  },
+  {
+    "kullanici_adi": "TechCrunch",
+    "role": "Publisher",
+    "profil_resmi": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+    "id": 1769993532106
+  },
+  {
+    "kullanici_adi": "Cnet",
+    "role": "Publisher",
+    "id": 1769997359031
+  },
+  {
+    "kullanici_adi": "Wired",
+    "role": "Publisher",
+    "id": 1770151048323
+  },
+  {
+    "kullanici_adi": "Gizmodo",
+    "role": "Publisher",
+    "id": 1770151069727
+  },
+  {
+    "kullanici_adi": "Ars Technica",
+    "role": "Publisher",
+    "id": 1770151077709
+  },
+  {
+    "kullanici_adi": "PC Gamer",
+    "role": "Publisher",
+    "id": 1770151085053
+  },
+  {
+    "kullanici_adi": "GameSpot",
+    "role": "Publisher",
+    "id": 1770151090983
+  },
+  {
+    "kullanici_adi": "ScienceDaily",
+    "role": "Publisher",
+    "id": 1770151098089
+  },
+  {
+    "kullanici_adi": "Livemint",
+    "role": "Publisher",
+    "id": 1770151102248
+  },
+  {
+    "kullanici_adi": "The Verge",
+    "role": "Publisher",
+    "id": 1770151110803
+  },
+  {
+    "kullanici_adi": "The New York Times",
+    "role": "Publisher",
+    "id": 1770151118260
+  }
+]

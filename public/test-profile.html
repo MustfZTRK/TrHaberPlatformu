@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Test</title>
+</head>
+
+<body>
+    <h1>Profil Testi</h1>
+    <button onclick="clearStorage()">LocalStorage Temizle</button>
+    <button onclick="checkStorage()">LocalStorage Kontrol Et</button>
+    <button onclick="testProfile()">Profil API Test</button>
+    <pre id="output"></pre>
+
+    <script>
+        const output = document.getElementById('output');
+
+        function clearStorage() {
+            localStorage.clear();
+            output.textContent = 'LocalStorage temizlendi. Şimdi ana sayfaya gidin ve giriş yapın.';
+        }
+
+        function checkStorage() {
+            const user = localStorage.getItem('trhaber_user');
+            if (user) {
+                const parsed = JSON.parse(user);
+                output.textContent = 'Mevcut kullanıcı:\n' + JSON.stringify(parsed, null, 2);
+            } else {
+                output.textContent = 'LocalStorage boş. Giriş yapmanız gerekiyor.';
+            }
+        }
+
+        async function testProfile() {
+            const user = localStorage.getItem('trhaber_user');
+            if (!user) {
+                output.textContent = 'Önce giriş yapın!';
+                return;
+            }
+
+            const parsed = JSON.parse(user);
+            const username = parsed.kullanici_adi;
+            output.textContent = `Profil testi başlatılıyor: ${username}\n\n`;
+
+            try {
+                const encodedUsername = encodeURIComponent(username);
+                output.textContent += `Encoded username: ${encodedUsername}\n`;
+                output.textContent += `Request URL: /api/user/history/${encodedUsername}\n\n`;
+
+                const response = await fetch(`/api/user/history/${encodedUsername}`);
+                output.textContent += `Response status: ${response.status}\n`;
+
+                if (response.ok) {
+                    const data = await response.json();
+                    output.textContent += 'Başarılı! Profil verisi:\n' + JSON.stringify(data, null, 2);
+                } else {
+                    const error = await response.text();
+                    output.textContent += `Hata: ${error}`;
+                }
+            } catch (err) {
+                output.textContent += `Fetch hatası: ${err.message}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

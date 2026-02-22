@@ -1,0 +1,42 @@
+{
+    "gemini_api_key": "Gemini API Key",
+    "scrape_urls": [
+        "https://www.gamespot.com/feeds/news/",
+        "https://www.livemint.com/rss/technology",
+        "https://techcrunch.com/latest/",
+        "https://www.cnet.com/news/",
+        "https://www.wired.com/category/politics/",
+        "https://www.wired.com/category/security/",
+        "https://www.wired.com/category/business/",
+        "https://www.wired.com/category/science/",
+        "https://www.wired.com/category/culture/",
+        "https://arstechnica.com/information-technology/",
+        "https://arstechnica.com/cars/",
+        "https://arstechnica.com/culture/",
+        "https://arstechnica.com/gaming/",
+        "https://arstechnica.com/health/",
+        "https://arstechnica.com/tech-policy/",
+        "https://arstechnica.com/science/",
+        "https://arstechnica.com/security/",
+        "https://arstechnica.com/space/",
+        "https://arstechnica.com/gadgets/",
+        "https://www.livemint.com/rss/science",
+        "https://www.theverge.com/rss/tech/index.xml",
+        "https://www.sciencedaily.com/rss/all.xml",
+        "https://www.pcgamer.com/news/",
+        "https://gizmodo.com/latest",
+        "https://arstechnica.com/ai/"
+    ],
+    "categories": [
+        "Teknoloji",
+        "Yapay Zeka",
+        "Otomobil",
+        "Sağlık",
+        "Oyun",
+        "Bilim",
+        "Kültür",
+        "Politika",
+        "Güvenlik",
+        "Uzay"
+    ]
+}

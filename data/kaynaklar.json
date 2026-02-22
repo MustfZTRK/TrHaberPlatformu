@@ -1,0 +1,68 @@
+[
+  {
+    "isim": "The New York Times",
+    "url": "https://www.nytimes.com/",
+    "logo": "https://1000logos.net/wp-content/uploads/2017/04/New-York-Times-logo.jpg",
+    "id": 1769991182691
+  },
+  {
+    "isim": "The Verge",
+    "url": "https://www.theverge.com/",
+    "logo": "https://images.seeklogo.com/logo-png/45/1/the-verge-logo-png_seeklogo-459122.png",
+    "id": 1769991423648
+  },
+  {
+    "isim": "TechCrunch",
+    "url": "https://techcrunch.com/",
+    "logo": "https://techcrunch.com/wp-content/uploads/2011/07/logo-3d.png?w=1024",
+    "id": 1769991482280
+  },
+  {
+    "isim": "Wired",
+    "url": "https://www.wired.com/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/1280px-Wired_logo.svg.png",
+    "id": 1769991536305
+  },
+  {
+    "isim": "Gizmodo",
+    "url": "https://gizmodo.com/",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRIEuL-A2ehV0UYhvpw-LZFFX23UVDLCJoA&s",
+    "id": 1769991570068
+  },
+  {
+    "isim": "Ars Technica",
+    "url": "https://arstechnica.com/",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ars_Technica_logo_%282016%29.svg/500px-Ars_Technica_logo_%282016%29.svg.png",
+    "id": 1769991611372
+  },
+  {
+    "isim": "Livemint",
+    "url": "https://www.livemint.com/",
+    "logo": "https://vectorseek.com/wp-content/uploads/2023/08/Livemint-Logo-Vector.svg-.png",
+    "id": 1769991646997
+  },
+  {
+    "isim": "ScienceDaily",
+    "url": "https://www.sciencedaily.com/",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfK0dgKk1zP1tNnzkMPHG2JpGhXz5uU1q9-A&s",
+    "id": 1769991680469
+  },
+  {
+    "isim": "PC Gamer",
+    "url": "https://www.pcgamer.com/",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj9-l2sscifSqt7GExflrZbfxMmwoNoT3sFw&s",
+    "id": 1769991749752
+  },
+  {
+    "isim": "GameSpot",
+    "url": "https://www.gamespot.com/",
+    "logo": "https://media.licdn.com/dms/image/v2/C4E0BAQFhW1gSOE8r4A/company-logo_200_200/company-logo_200_200/0/1631312836641?e=2147483647&v=beta&t=SwNXQ8CcaBJiHzWxA95DG8UdG4sUiGzeD5KvzadKYNQ",
+    "id": 1769991805554
+  },
+  {
+    "isim": "Cnet",
+    "url": "https://www.cnet.com",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRstLJyhA051ZdPDfMD0fiCCBFVXawbv1THrA&s",
+    "id": 1769997334205
+  }
+]
