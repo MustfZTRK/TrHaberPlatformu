@@ -1,4 +1,8 @@
+
+
 # TrHaber - AI Destekli Otomatik Haber Platformu
+
+<a href="https://ibb.co/0Vv7QnxJ"><img src="https://i.ibb.co/M5Qv9gmN/Ekran-g-r-nt-s-2026-02-22-051625.png" alt="Ekran-g-r-nt-s-2026-02-22-051625" border="0"></a>
 
 Bu proje, dünya çapındaki teknoloji ve bilim haberlerini anlık olarak takip eden, Google Gemini Yapay Zeka (AI) teknolojisini kullanarak bu haberleri Türkçeye çeviren ve profesyonel bir haber diliyle yeniden yazan tam kapsamlı bir haber platformudur.
 
