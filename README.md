@@ -56,8 +56,14 @@ pip install requests beautifulsoup4 google-generativeai feedparser cryptography 
     "scrape_urls": [...],
     "categories": [...]
 }
-```
 
+scraper.py'da bulunan değişkenleri kendi kullanımınıza göre özelleştirin.
+
+file_path = "/home/webhosting/public_html/data/haberler.json"
+app_cat_path = "/home/webhosting/public_html/data/kategoriler.json"
+model = genai.GenerativeModel('gemma-3-27b-it')
+
+```
 ### 4. Sistemini Başlatma
 Haberleri çekmek ve AI ile işlemek için:
 ```bash
